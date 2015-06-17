@@ -1,0 +1,25 @@
+Serious project !
+
+Can you develop me Qt5 C++ only the 2 IMAP4REV1 commands
+(SORT/THREAD) and SEARCH.
+
+(SORT/THREAD) https://tools.ietf.org/html/rfc5256,
+
+SEARCH :
+https://tools.ietf.org/html/rfc3501
+https://tools.ietf.org/search/rfc4731
+https://tools.ietf.org/search/rfc5182
+
+Eg :
+QString searchCommand(const QString &clientCmd, const QString &dirMail) const
+{
+
+foreach(const QString &mailFile, listeMailIn(dirMail))
+{
+const QString &msg(fileGetContents(mailFile));
+
+SEARCH -> clientCmd in this msg ....
+}
+
+return value;
+}
